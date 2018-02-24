@@ -7,11 +7,8 @@
 </head>
 
 <body>
-	<%
-		String saludo = "hola mundo";
-	%>
 	<div class="container well">
-		<form action="labServlet?action=enviar" method=post>
+		<form action="labServlet" method=POST>
 			<table>
 				<tr>
 					<th><label><b>Nombre:</b></label></th>
@@ -34,10 +31,10 @@
 				<tr>
 					<td colspan="2">
 					<input class="btn btn-info btn-lg"
-						type="submit" value="Enviar datos" action="enviar" /> <span
-						class="glyphicon glyphicon-lock"></span> <input
-						class="btn btn-info btn-lg" type="reset" value="cancelar" action="enviar" /> <span
-						class="glyphicon glyphicon-lock"></span> <%=saludo%></td>
+						type="submit" value="Enviar datos" /> <span
+						class="glyphicon glyphicon-lock"></span> 
+						<input class="btn btn-info btn-lg" type="reset" value="cancelar"  /> <span
+						class="glyphicon glyphicon-lock"></span>
 				</tr>
 
 			</table>

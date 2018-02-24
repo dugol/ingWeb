@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/labServlet")
 public class labServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public labServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public labServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -32,25 +32,21 @@ public class labServlet extends HttpServlet {
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		PrintWriter out=response.getWriter();
-		try {
-			String action=request.getParameter("action");
-			String url="formulario.jsp";
-			if("enviar".equalsIgnoreCase(action)) {
-				String name=request.getParameter("name");
-				String edad=request.getParameter("edad");
-				String email=request.getParameter("email");
-				request.getSession().setAttribute("nombre", name);
-			}
-			response.sendRedirect(url);
-		}
-		finally {
-			out.close();
+		//String action=request.getParameter("action");
+		//String url="formulario.jsp";
+			String nombre=request.getParameter("nombre");
+			String edad=request.getParameter("edad");
+			String email=request.getParameter("email");
+			request.getSession().setAttribute("nombre", nombre);
+			String url="datos.jsp";
 		
-	} 
+		//response.sendRedirect(url);
 	}
 
 }
