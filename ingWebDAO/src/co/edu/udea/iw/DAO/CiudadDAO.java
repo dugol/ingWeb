@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 
  * @author Daniel Uribe Giraldo- Daniel.uribeg@udea.edu.co
- *
+ * 
  */
 public interface CiudadDAO {
 
