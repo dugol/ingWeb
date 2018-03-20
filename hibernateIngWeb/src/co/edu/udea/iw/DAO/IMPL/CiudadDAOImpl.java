@@ -45,10 +45,11 @@ public class CiudadDAOImpl implements CiudadDAO {
 			session=ds.getSession();
 			Criteria crit=session.createCriteria(Ciudad.class)
 					.addOrder(Order.asc("nombre"));
+			ciudades=crit.list();
 		}catch(HibernateException e) {
 			throw new ClassException();
 		}
-		return null;
+		return ciudades;
 	}
 
 }

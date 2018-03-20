@@ -2,6 +2,7 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="lib" path="/home/estudiantes/daniel.uribeg/Downloads/LibreriasHibernate/antlr-2.7.6.jar"/>
 	<classpathentry kind="lib" path="/home/estudiantes/daniel.uribeg/Downloads/LibreriasHibernate/commons-collections-3.1.jar"/>
 	<classpathentry kind="lib" path="/home/estudiantes/daniel.uribeg/Downloads/LibreriasHibernate/dom4j-1.6.1.jar"/>
@@ -11,5 +12,9 @@
 	<classpathentry kind="lib" path="/home/estudiantes/daniel.uribeg/Downloads/LibreriasHibernate/jta-1.1.jar"/>
 	<classpathentry kind="lib" path="/home/estudiantes/daniel.uribeg/Downloads/LibreriasHibernate/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="lib" path="/home/estudiantes/daniel.uribeg/Downloads/LibreriasHibernate/slf4j-log4j12-1.7.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="/home/estudiantes/daniel.uribeg/Downloads/apache-log4j-1.2.17.zip"/>
+	<classpathentry kind="lib" path="/home/estudiantes/daniel.uribeg/Downloads/mysql-connector-java-5.1.22-bin.jar"/>
+	<classpathentry kind="lib" path="/home/estudiantes/daniel.uribeg/Downloads/apache-log4j-1.2.17/log4j-1.2.17.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
