@@ -10,5 +10,7 @@
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <mapping resource="co/edu/udea/iw/DTO/Ciudad.hbm.xml"/>
+        <mapping resource="co/edu/udea/iw/DTO/Rol.hbm.xml"/>
+        <mapping resource="co/edu/udea/iw/DTO/Usuario.hbm.xml"/>
     </session-factory>
 </hibernate-configuration>

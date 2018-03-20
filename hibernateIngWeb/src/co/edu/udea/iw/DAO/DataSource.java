@@ -24,7 +24,7 @@ public class DataSource {
 			return sessionFactory.openSession();
 			
 		}catch(HibernateException e) {
-			throw new ClassException();
+			throw new ClassException(e);
 		}
 	}
 
