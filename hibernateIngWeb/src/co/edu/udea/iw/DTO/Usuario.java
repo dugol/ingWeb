@@ -6,7 +6,7 @@ public class Usuario {
 	private String nombres;
 	private String apellidos;
 	private String contrasena;
-	private String rol;
+	private Rol rol;
 
 	public String getLogin() {
 		return login;
@@ -42,11 +42,11 @@ public class Usuario {
 		this.contrasena = contrasena;
 	}
 
-	public String getRol() {
+	public Rol getRol() {
 		return rol;
 	}
 
-	public void setRol(String rol) {
+	public void setRol(Rol rol) {
 		this.rol = rol;
 	}
 

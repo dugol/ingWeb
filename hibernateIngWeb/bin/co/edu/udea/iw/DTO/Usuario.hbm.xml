@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated Mar 20, 2018 1:14:52 PM by Hibernate Tools 3.5.0.Final -->
+<!-- Generated Mar 22, 2018 1:21:02 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.iw.DTO.Usuario" table="usuarios">
-        <id name="login" type="java.lang.String">
-            <column name="LOGIN" />
+    <class name="co.edu.udea.iw.DTO.Usuario" table="USUARIO">
+        <id name="apellidos" type="java.lang.String">
+            <column name="APELLIDOS" />
             <generator class="assigned" />
         </id>
-        <property name="apellidos" type="java.lang.String">
-            <column name="APELLIDOS" />
+        <property name="login" type="java.lang.String">
+            <column name="LOGIN" />
         </property>
         <property name="nombres" type="java.lang.String">
             <column name="NOMBRES" />
@@ -17,8 +17,8 @@
         <property name="contrasena" type="java.lang.String">
             <column name="CONTRASENA" />
         </property>
-        <property name="rol" type="java.lang.String">
+        <many-to-one name="rol" class="co.edu.udea.iw.DTO.Rol" fetch="join">
             <column name="ROL" />
-        </property>
+        </many-to-one>
     </class>
 </hibernate-mapping>
