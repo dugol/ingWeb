@@ -7,6 +7,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Restrictions;
 
 import co.edu.udea.iw.DAO.DataSource;
 import co.edu.udea.iw.DAO.UsuarioDAO;
@@ -64,5 +65,24 @@ public class UsuarioDAOImpl implements UsuarioDAO {
 		}
 		return usuarios;
 	}
+
+	@Override
+	public Usuario obtener(String login) throws ClassException {
+		Session session=null;
+		DataSource ds=new DataSource();
+		Usuario usuario=null;
+		try{
+			session=ds.getSession();
+			Criteria crit=session.createCriteria(Usuario.class)
+					.add(Restrictions.eq("login", login));
+			usuario=(Usuario)crit.uniqueResult();
+			
+		}catch(HibernateException e) {
+			throw new ClassException(e);
+		}
+		return usuario;
+	}
+	
+	
 
 }

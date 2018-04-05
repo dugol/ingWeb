@@ -62,6 +62,22 @@ class UsuarioDAOImplTest {
 		}
 	}
 	
+	@Test
+	void test3(){
+		UsuarioDAO dao=null;
+		Usuario usuario=null;
+		try {
+			dao=new UsuarioDAOImpl();
+			usuario=dao.obtener("dugol");
+			assertTrue(usuario != null);
+			
+		}catch(ClassException e) {
+			e.printStackTrace();
+			fail(e.getMessage());
+		}
+	}
+	
+	
 	
 
 }

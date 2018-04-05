@@ -11,5 +11,6 @@ public interface UsuarioDAO {
 	public void actualizar(Usuario usuario) throws ClassException;
 	public void eliminar(Usuario usuario) throws ClassException;
 	public List<Usuario> obtener() throws ClassException;
+	public Usuario obtener(String login) throws ClassException;
 
 }

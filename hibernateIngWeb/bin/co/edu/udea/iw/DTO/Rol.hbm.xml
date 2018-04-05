@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Mar 22, 2018 1:21:02 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.iw.DTO.Rol" table="ROL">
+    <class name="co.edu.udea.iw.DTO.Rol" table="roles">
         <id name="Codigo" type="java.lang.String">
             <column name="CODIGO" />
             <generator class="assigned" />

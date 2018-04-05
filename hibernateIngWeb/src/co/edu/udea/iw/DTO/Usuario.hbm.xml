@@ -3,13 +3,13 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Mar 22, 2018 1:21:02 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.iw.DTO.Usuario" table="USUARIO">
-        <id name="apellidos" type="java.lang.String">
-            <column name="APELLIDOS" />
+    <class name="co.edu.udea.iw.DTO.Usuario" table="usuarios">
+        <id name="login" type="java.lang.String">
+            <column name="LOGIN" />
             <generator class="assigned" />
         </id>
-        <property name="login" type="java.lang.String">
-            <column name="LOGIN" />
+        <property name="apellidos" type="java.lang.String">
+            <column name="APELLIDOS" />
         </property>
         <property name="nombres" type="java.lang.String">
             <column name="NOMBRES" />

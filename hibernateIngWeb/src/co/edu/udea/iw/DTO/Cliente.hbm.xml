@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated Mar 22, 2018 1:21:02 PM by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="co.edu.udea.iw.DTO.Cliente" table="CLIENTE">
+    <class name="co.edu.udea.iw.DTO.Cliente" table="clientes">
         <id name="apellidos" type="java.lang.String">
             <column name="APELLIDOS" />
             <generator class="assigned" />
