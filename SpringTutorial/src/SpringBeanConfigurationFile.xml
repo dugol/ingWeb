@@ -21,11 +21,11 @@
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="mappingResources">
 			<list>
-				<value>co/edu/udea/iw/dao/mapping/Ciudad.hmb.xml</value>
-				<value>co/edu/udea/iw/dao/mapping/Cliente.hmb.xml</value>
-				<value>co/edu/udea/iw/dao/mapping/Direccion.hmb.xml</value>
-				<value>co/edu/udea/iw/dao/mapping/Rol.hmb.xml</value>
-				<value>co/edu/udea/iw/dao/mapping/Usuario.hmb.xml</value>
+				<value>co/edu/udea/iw/dao/mapping/Ciudad.hbm.xml</value>
+				<value>co/edu/udea/iw/dao/mapping/Cliente.hbm.xml</value>
+				<value>co/edu/udea/iw/dao/mapping/Direccion.hbm.xml</value>
+				<value>co/edu/udea/iw/dao/mapping/Rol.hbm.xml</value>
+				<value>co/edu/udea/iw/dao/mapping/Usuario.hbm.xml</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">
@@ -36,9 +36,23 @@
 		</property>
 
 	</bean>
+	
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
 
 	<bean id="ciudadDao" class="co.edu.udea.iw.dao.impl.CiudadDAOimpl">
 		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="usuarioDao" class="co.edu.udea.iw.dao.impl.UsuarioDAOimpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="clienteDao" class="co.edu.udea.iw.dao.impl.ClienteDAOimpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<bean id="clienteBL" class="co.edu.udea.iw.bl.impl.ClienteBlimpl">
 	</bean>
 
 
