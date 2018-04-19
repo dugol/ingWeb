@@ -21,20 +21,18 @@ public class ClienteDAOimpl extends HibernateDaoSupport implements ClienteDAO {
 	@Override
 	public Cliente insertar(Cliente cliente) throws IWDaoException {
 		
-		Transaction tx = null;
+		
 		Session session = null;
 		try{
 			session = this.getSessionFactory().getCurrentSession();
 			
-			tx = session.beginTransaction();
+		
 			session.save(cliente);
-			tx.commit();
+		
 			
 			
 		}catch(HibernateException e){
 			throw new IWDaoException(e);
-		}finally{
-			session.close();
 		}
 		
 		return cliente;

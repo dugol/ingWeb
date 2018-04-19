@@ -9,4 +9,5 @@ import co.edu.udea.iw.dto.Cliente;
 public interface ClienteBL {
 
 	public List<Cliente> obtener() throws IWDaoException;
+	public Cliente insertar(Cliente cliente) throws IWDaoException;
 }
