@@ -21,7 +21,7 @@ public class UsuarioBLImplTest {
 	UsuarioBL usuarioBL;
 
 	@Test
-	public void test(){
+	public void testAutenticar(){
 		try {
 			usuarioBL.autenticar("dugol", "123456789");
 		}catch(IWDaoException e) {
