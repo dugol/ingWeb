@@ -6,8 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -48,5 +50,17 @@ public class ClientService {
 		return clientes;
 		
 		
+	}
+	
+	@Produces(MediaType.TEXT_PLAIN)
+	@POST
+	public String guardarCliente(Cliente cliente){
+		
+		try{
+			clienteBlimpl.insertar(cliente);
+		}catch(IWDaoException e){
+			return e.getMessage();
+		}
+		return "";
 	}
 }
