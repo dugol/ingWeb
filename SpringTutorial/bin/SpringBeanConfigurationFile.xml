@@ -57,5 +57,7 @@
 
 	<bean id="usuarioBL" class="co.edu.udea.iw.bl.impl.UsuarioBLimpl">
 	</bean>
+	
+	<context:component-scan base-package="co.edu.udea.iw.Restws"></context:component-scan>
 
 </beans>

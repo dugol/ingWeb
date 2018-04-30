@@ -19,7 +19,7 @@ public class UsuarioBLimpl implements UsuarioBL {
 	}
 
 	@Override
-	public Usuario autenticar(String login, String contraseña) throws IWDaoException {
+	public Usuario autenticar(String login, String contrase�a) throws IWDaoException {
 		Usuario usuario=null;
 		Cifrar cifra= new Cifrar();
 		
@@ -27,7 +27,7 @@ public class UsuarioBLimpl implements UsuarioBL {
 		if(usuario==null) {
 			throw new IWDaoException("Usuario y/o contraseña inválida");
 		}
-		if(!usuario.getPassword().equals(contraseña)) {
+		if(!usuario.getPassword().equals(contrase�a)) {
 			throw new IWDaoException("Usuario y/o contraseña inválida");
 		}
 		
