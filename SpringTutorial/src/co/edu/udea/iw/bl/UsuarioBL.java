@@ -5,6 +5,6 @@ import co.edu.udea.iw.exception.IWDaoException;
 
 public interface UsuarioBL {
 	
-	public Usuario autenticar(String login, String contraseña) throws IWDaoException;
+	public Usuario autenticar(String login, String contraseÃ±a) throws IWDaoException;
 
 }

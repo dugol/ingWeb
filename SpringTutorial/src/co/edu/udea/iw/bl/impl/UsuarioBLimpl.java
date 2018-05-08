@@ -7,7 +7,6 @@ import co.edu.udea.iw.dao.UsuarioDAO;
 import co.edu.udea.iw.dto.Usuario;
 import co.edu.udea.iw.exception.IWDaoException;
 import co.edu.udea.iw.util.encode.Cifrar;
-import co.edu.udea.iw.util.validations.Validaciones;
 
 public class UsuarioBLimpl implements UsuarioBL {
 	
@@ -19,7 +18,7 @@ public class UsuarioBLimpl implements UsuarioBL {
 	}
 
 	@Override
-	public Usuario autenticar(String login, String contrase�a) throws IWDaoException {
+	public Usuario autenticar(String login, String contraseña) throws IWDaoException {
 		Usuario usuario=null;
 		Cifrar cifra= new Cifrar();
 		
@@ -27,7 +26,7 @@ public class UsuarioBLimpl implements UsuarioBL {
 		if(usuario==null) {
 			throw new IWDaoException("Usuario y/o contraseña inválida");
 		}
-		if(!usuario.getPassword().equals(contrase�a)) {
+		if(!usuario.getPassword().equals(contraseña)) {
 			throw new IWDaoException("Usuario y/o contraseña inválida");
 		}
 		

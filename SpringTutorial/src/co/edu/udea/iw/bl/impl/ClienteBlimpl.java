@@ -31,13 +31,13 @@ public class ClienteBlimpl implements ClienteBL {
 	@Override
 	public Cliente insertar(Cliente cliente) throws IWDaoException {
 		Validaciones validaciones= new Validaciones();
-		boolean esCorreo=validaciones.isEmail(cliente.getCorreoElectronico());
-		boolean cedulaVacia=validaciones.isTextoVacio(cliente.getCedula());
-		boolean nombreVacio=validaciones.isTextoVacio(cliente.getNombres());
-		boolean apellidoVacio=validaciones.isTextoVacio(cliente.getApellidos());
+		boolean esCorreo=Validaciones.isEmail(cliente.getCorreoElectronico());
+		boolean cedulaVacia=Validaciones.isTextoVacio(cliente.getCedula());
+		boolean nombreVacio=Validaciones.isTextoVacio(cliente.getNombres());
+		boolean apellidoVacio=Validaciones.isTextoVacio(cliente.getApellidos());
 		cliente.setFechaCreacion(new Date());
 		cliente.setEliminado(Boolean.FALSE);
-		if(esCorreo==false || validaciones.isTextoVacio(cliente.getCorreoElectronico())) {
+		if(esCorreo==false || Validaciones.isTextoVacio(cliente.getCorreoElectronico())) {
 			throw new IWDaoException("El correo electronico es vacío o no corresponde a un Email");
 		}
 		if(cedulaVacia==true) {

@@ -12,7 +12,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import co.edu.udea.iw.bl.ClienteBL;
-import co.edu.udea.iw.dao.ClienteDAO;
 import co.edu.udea.iw.dto.Cliente;
 import co.edu.udea.iw.dto.Usuario;
 import co.edu.udea.iw.exception.IWDaoException;

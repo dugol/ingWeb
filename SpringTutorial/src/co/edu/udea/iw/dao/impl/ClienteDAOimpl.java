@@ -8,11 +8,9 @@ import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.criterion.Restrictions;
 import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 
 import co.edu.udea.iw.dao.ClienteDAO;
-import co.edu.udea.iw.dto.Ciudad;
 import co.edu.udea.iw.dto.Cliente;
 import co.edu.udea.iw.exception.IWDaoException;
 

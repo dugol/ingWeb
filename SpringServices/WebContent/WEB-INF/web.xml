@@ -26,8 +26,8 @@
 	</servlet-mapping>
 
 	<context-param>
-		<param-name>ContextConfigLocation</param-name>
-		<param-value>Classpath:SpringBeanConfigurationFile.xml</param-value>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:SpringBeanConfigurationFile.xml</param-value>
 	</context-param>
 
 	<listener>
