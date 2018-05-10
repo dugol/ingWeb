@@ -59,5 +59,6 @@
 	</bean>
 	
 	<context:component-scan base-package="co.edu.udea.iw.Restws"></context:component-scan>
+	<tx:annotation-driven/>
 
 </beans>

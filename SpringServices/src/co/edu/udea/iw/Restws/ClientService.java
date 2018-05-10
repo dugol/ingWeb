@@ -14,6 +14,7 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import co.edu.udea.iw.bl.ClienteBL;
 import co.edu.udea.iw.bl.impl.ClienteBlimpl;
 import co.edu.udea.iw.dto.Cliente;
 import co.edu.udea.iw.dto.ClienteServiceDTO;
@@ -24,7 +25,7 @@ import co.edu.udea.iw.exception.IWDaoException;
 public class ClientService {
 
 	@Autowired
-	private ClienteBlimpl clienteBlimpl;
+	private ClienteBL clienteBlimpl;
 	
 	@Produces(javax.ws.rs.core.MediaType.APPLICATION_JSON)
 	@GET
